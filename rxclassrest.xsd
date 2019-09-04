@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ............................................................... -->
+<!-- XML Schema specification for RXNORM RESTful web services ..... -->
+<!-- Modified: 22-Jan-2014 ......................................... -->
+<!-- ............................................................... -->
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:element name="rxclassdata">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="userInput" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="comment" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="suggestionList" minOccurs="0"
+					maxOccurs="1" />
+				<xsd:element ref="rxclassTree" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="rxclassGraph" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="SimilarityInformation" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="drugMemberGroup" minOccurs="0"
+					maxOccurs="1" />
+				<xsd:element ref="classPathList" minOccurs="0"
+					maxOccurs="1" />
+				<xsd:element ref="rxclassMinConceptList" minOccurs="0"
+					maxOccurs="1" />
+				<xsd:element ref="similarityMember" minOccurs="0"
+					maxOccurs="1" />
+				<xsd:element ref="classTypeList" minOccurs="0"
+					maxOccurs="1" />
+				<xsd:element ref="relaSourceList" minOccurs="0"
+					maxOccurs="1" />
+				<xsd:element ref="rxclassDrugInfoList" minOccurs="0"
+					maxOccurs="1" />
+				<xsd:element ref="resourceList" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="relaList" minOccurs="0" maxOccurs="1" />
+
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+
+
+	<xsd:element name="userInput">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="type" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="term" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="classId" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="classId1" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="classId2" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="className" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="trans" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="relaSource" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="relaSource1" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="relaSource2" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="relaSources" minOccurs="0" maxOccurs="unbounded" />
+				<xsd:element ref="rela" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="rela1" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="rela2" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="relas" minOccurs="0" maxOccurs="unbounded" />
+				<xsd:element ref="ttys" minOccurs="0" maxOccurs="unbounded" />
+				<xsd:element ref="classTypes" minOccurs="0" maxOccurs="unbounded" />
+				<xsd:element ref="rxcui" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="drugName" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="scoreType" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="top" minOccurs="0" maxOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="resourceList">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="resource" minOccurs="1" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="resource">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+
+	<xsd:element name="top">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	<xsd:element name="comment">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	<xsd:element name="trans">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	<xsd:element name="name">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	<xsd:element name="type">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	<xsd:element name="term">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	<xsd:element name="rela">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	<xsd:element name="rela1">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	<xsd:element name="rela2">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	<xsd:element name="relas">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+
+	<xsd:element name="drugName">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	<xsd:element name="suggestion">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	<xsd:element name="classId">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	<xsd:element name="classId1">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	<xsd:element name="classId2">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+
+	<xsd:element name="className">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	<xsd:element name="classType">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	<xsd:element name="classTypes">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	
+	<xsd:element name="scoreType">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+
+	<xsd:element name="suggestionList">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="suggestion" minOccurs="0" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="relaList">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="rela" minOccurs="0" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="rxclassTree">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="rxclassMinConceptItem" minOccurs="1"
+					maxOccurs="1" />
+				<xsd:element ref="rxclassTree" minOccurs="0" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="SimilarityInformation">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="drugClassConcept" minOccurs="0"
+					maxOccurs="2" />
+				<xsd:element ref="drugClassPair" minOccurs="0" maxOccurs="unbounded" />
+				<xsd:element ref="similarityEntityItem" minOccurs="0" maxOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="drugClassPair">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="minConcept" minOccurs="1"
+					maxOccurs="1" />
+				<xsd:element ref="inClass1" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="inClass2" minOccurs="1" maxOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="rxclassGraph">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="rxclassMinConceptItem" minOccurs="0"
+					maxOccurs="unbounded" />
+				<xsd:element ref="rxclassEdge" minOccurs="0" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="rxclassEdge">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="classId1" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="rela" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="classId2" minOccurs="1" maxOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="rxclassMinConcept">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="classId" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="className" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="classType" minOccurs="1" maxOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="rxclassMinConceptItem">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="classId" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="className" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="classType" minOccurs="1" maxOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="drugMemberGroup">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="drugMember" minOccurs="0" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="drugMember">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="minConcept" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="nodeAttr" minOccurs="0" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+
+	<xsd:element name="minConcept">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="rxcui" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="name" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="tty" minOccurs="1" maxOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="nodeAttr">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="attrName" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="attrValue" minOccurs="1" maxOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="rxcui">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	<xsd:element name="attrName">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+
+	<xsd:element name="attrValue">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+
+	<xsd:element name="tty">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	
+	<xsd:element name="ingredientRxcui">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+
+	<xsd:element name="ttys">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	<xsd:element name="classPathList">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="classPath" minOccurs="0" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="classPath">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="rxclassMinConcept" minOccurs="0"
+					maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="rxclassMinConceptList">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="rxclassMinConcept" minOccurs="0"
+					maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	
+	<xsd:element name="similarityMember">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="ingredientRxcui" minOccurs="0"
+					maxOccurs="unbounded" />
+				<xsd:element ref="rankClassConcept" minOccurs="0"
+					maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="rxclassDrugInfoList">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="rxclassDrugInfo" minOccurs="0"
+					maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+
+	<xsd:element name="rxclassDrugInfo">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="minConcept" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="rxclassMinConceptItem" minOccurs="1"
+					maxOccurs="1" />
+				<xsd:element ref="rela" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="relaSource" minOccurs="1" maxOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="rankClassConcept">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="similarityEntityItem" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="drugClassConceptItem" minOccurs="1" maxOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	
+	<xsd:element name="drugClassConcept">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="rela" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="relaSource" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="rxclassMinConceptItem" minOccurs="1"
+					maxOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="drugClassConceptItem">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="rela" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="relaSource" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="rxclassMinConceptItem" minOccurs="1"
+					maxOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	
+	<xsd:element name="similarityEntityItem">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="equivalenceScore" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="inclusionScore" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="intersection" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="cardinality1" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="cardinality2" minOccurs="1" maxOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	
+	<xsd:element name="equivalenceScore">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	<xsd:element name="inclusionScore">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	<xsd:element name="intersection">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	<xsd:element name="cardinality1">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	<xsd:element name="cardinality2">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	
+	<xsd:element name="relaSource">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	<xsd:element name="relaSource1">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	<xsd:element name="relaSource2">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	
+	<xsd:element name="relaSources">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	<xsd:element name="relaSourceName">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	<xsd:element name="classTypeName">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	<xsd:element name="inClass1">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+	<xsd:element name="inClass2">
+		<xsd:complexType mixed="true" />
+	</xsd:element>
+
+	<xsd:element name="classTypeList">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="classTypeName" minOccurs="0"
+					maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="relaSourceList">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="relaSourceName" minOccurs="0"
+					maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+</xsd:schema>
